@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #F1F5F8;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*START Scrollbar*/
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(71, 71, 71);
+  border-radius: 10px;
+}
+/*END Scrollbar*/
+
+/*START Header Section*/
+#header {
+  margin: 50px 0;
+  text-align: center;
+}
+
+#title {
+  font-family: 'Send Flowers', cursive;
+  font-size: 70px;
+  font-weight: 500;
+  color: #FF6A23;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+#buttons {
+  margin-bottom: 10px;
+}
+
+#buttons > button {
+  padding: 10px 5px;
+  width: 70px;
+  margin: 0 5px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+#buttons > button:hover {
+  color: rgb(255, 255, 255);
+  background-color: #212529;
+}
+/*END Header Section*/
+
+/*START Main Section*/
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 1200px;
+}
+
+.center {
+  display: flex;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.name-price-div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.other-div {
+  width: 100%;
+  margin: 0 30px;
+}
+
+.food-title {
+  color: #E33600;
+  font-weight: 400;
+}
+
+.price {
+  color: #E33600;
+}
+
+.desc {
+  font-size: 18px;
+}
+
+.images {
+  width: 200px;
+  height: 170px;
+  border-radius: 10px;
+  border: 5px solid black;
+  object-fit: cover;
+}
+/*END Main Section*/
+
+@media all and (max-width: 992px) {
+  #main {
+    display: block;
+  }
+
+  #title {
+    font-size: 60px;
+  }
+
+  .center {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #header {
+    margin-top: 10px;
+  }
+
+  #title {
+    font-size: 50px;
+  }
+
+  #buttons {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .images {
+    width: 140px;
+    height: 140px;
+  }
+
+  .other-div {
+    margin: 0 10px;
+  }
+}
